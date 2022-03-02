@@ -1,0 +1,24 @@
+Get all the chapters for specific enrolled course
+---
+tags:
+  - Students
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: path
+    name: user_id
+    required: true
+  - in: path
+    name: course_id
+    required: true
+
+responses:
+  200:
+    description: Successfully retrived all the chapters of specific enrolled course
+
+  400:
+    description: Fails to retrieve chapters due to bad request data
+
+  401:
+    description: Fails to get students information due to authentication error

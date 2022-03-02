@@ -1,0 +1,31 @@
+Create Course
+---
+tags:
+  - Admin
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - name: body
+    description: The body should contain the course data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "course_title"
+        - "course_brief"
+      properties:
+        course_title:
+          type: "course_title"
+          example: "Course Title"
+        course_brief:
+          type: "course_brief"
+          example: "Course Description"
+
+responses:
+  201:
+    description: When a user successfully registered
+
+  400:
+    description: Fails to Register due to bad request data

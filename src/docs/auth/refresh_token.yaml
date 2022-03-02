@@ -1,0 +1,15 @@
+Refresh Token
+---
+tags:
+  - Authentication
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+
+responses:
+  200:
+    description: When user get the refresh token
+
+  401:
+    description: A user supplies incorrect credentials

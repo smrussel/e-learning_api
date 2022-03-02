@@ -1,0 +1,38 @@
+Create Chapter of specific course
+---
+tags:
+  - Admin
+parameters:
+  - in: path
+    name: course_id
+    required: true
+  - in: header
+    name: Authorization
+    required: true
+  - name: body
+    description: The body should contain the chapter data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "title"
+        - "description"
+        - "video_url"
+      properties:
+        title:
+          type: "course_title"
+          example: "Title"
+        description:
+          type: "description"
+          example: "Description"
+        video_url:
+          type: "video_url"
+          example: "Youtube Video URL"
+
+responses:
+  201:
+    description: When successfully Chapter created
+
+  400:
+    description: Fails to create chapter due to bad request data

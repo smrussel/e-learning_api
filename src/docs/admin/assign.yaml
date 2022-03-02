@@ -1,0 +1,34 @@
+Assign course to student
+---
+tags:
+  - Admin
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - name: body
+    description: The body should contain student and course data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "user_id"
+        - "course_id"
+      properties:
+        user_id:
+          type: "user_id"
+          example: 1
+        course_id:
+          type: "course_id"
+          example: 2
+
+responses:
+  201:
+    description: Successfully assigned course to a student
+
+  400:
+    description: Fails to assign course due to bad request data
+
+  409:
+    description: Course already assigned to this student

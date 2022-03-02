@@ -1,0 +1,16 @@
+GET All students information
+---
+tags:
+  - Admin
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+
+responses:
+  200:
+    description: All students information
+
+  401:
+    description: Fails to get students information due to authentication error

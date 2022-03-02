@@ -1,0 +1,16 @@
+GET User Information
+---
+tags:
+  - Authentication
+
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+
+responses:
+  200:
+    description: User information
+
+  401:
+    description: Fails to get User information due to authentication error

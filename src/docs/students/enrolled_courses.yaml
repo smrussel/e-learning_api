@@ -1,0 +1,21 @@
+Get all the enrolled courses of specific student
+---
+tags:
+  - Students
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: path
+    name: user_id
+    required: true
+
+responses:
+  200:
+    description: Successfully retrived all the enrolled courses
+
+  400:
+    description: Fails to retrieve courses due to bad request data
+
+  401:
+    description: Fails to get students information due to authentication error

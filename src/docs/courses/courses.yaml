@@ -1,0 +1,9 @@
+Get all the courses
+---
+tags:
+  - Courses
+
+
+responses:
+  200:
+    description: When successfully get the courses list
